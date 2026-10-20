@@ -56,7 +56,7 @@ const leavesQuery = z.object({
   status: z.enum(['pending', 'approved', 'rejected', 'cancelled']).optional(),
 });
 
-/** 관리자 페이지(attendance-app-admin)가 쓰는 회사 단위 조회와 인사 관리 */
+/** 관리자 페이지(onwork-admin)가 쓰는 회사 단위 조회와 인사 관리 */
 @Controller('admin')
 @UseGuards(ManagerGuard)
 export class AdminController {

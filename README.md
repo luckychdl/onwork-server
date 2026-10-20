@@ -1,6 +1,6 @@
 # 오늘근무 서버 (onwork-server)
 
-[attendance-app](../attendance-app)의 API 서버. [NestJS](https://nestjs.com) 12, DB는 Supabase(Postgres).
+[onwork](../onwork)의 API 서버. [NestJS](https://nestjs.com) 12, DB는 Supabase(Postgres).
 앱의 목(mock) 구현과 같은 규칙으로 동작하도록 `src/lib`의 판정 로직을 그대로 옮겼습니다.
 
 ## 시작하기
@@ -30,7 +30,7 @@ cp .env.example .env     # SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, JWT_SECRET �
 4. 앱의 `.env`에 주소를 넣으면 목 모드가 꺼지고 이 서버로 요청합니다.
 
    ```bash
-   # attendance-app/.env — 실기기에서는 localhost 대신 PC의 LAN IP
+   # onwork/.env — 실기기에서는 localhost 대신 PC의 LAN IP
    EXPO_PUBLIC_API_BASE_URL=http://192.168.0.10:3000
    ```
 
@@ -65,7 +65,7 @@ cp .env.example .env     # SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, JWT_SECRET �
 | POST | `/leave/requests/:id/cancel` · `/approve` · `/reject` | 취소 · 승인 · 반려 |
 | GET | `/health` | 상태 확인 |
 
-관리자 페이지([attendance-app-admin](../attendance-app-admin))가 쓰는 경로. `role: 'manager'`만 부를 수 있고(아니면 403),
+관리자 페이지([onwork-admin](../onwork-admin))가 쓰는 경로. `role: 'manager'`만 부를 수 있고(아니면 403),
 범위는 항상 토큰의 직원이 속한 회사입니다.
 
 | 메서드 | 경로 | 설명 |

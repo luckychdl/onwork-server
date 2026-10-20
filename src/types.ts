@@ -1,4 +1,4 @@
-/** 도메인 타입. 앱(attendance-app/src/api/types.ts)과 1:1로 맞춘다. */
+/** 도메인 타입. 앱(onwork/src/api/types.ts)과 1:1로 맞춘다. */
 
 export type GeoPoint = {
   latitude: number;
@@ -143,7 +143,7 @@ export type LeaveBalance = {
   remaining: number;
 };
 
-// ─── 관리자 페이지 (attendance-app-admin) ─────────────────────
+// ─── 관리자 페이지 (onwork-admin) ─────────────────────
 
 /** 관리자 화면의 직원 한 줄. 인사 정보에 그 해의 연차 현황을 붙인다. */
 export type AdminEmployee = Required<Employee> & {
