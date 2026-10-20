@@ -1,4 +1,4 @@
-# 출근체크 서버 (attendance-app-server)
+# 오늘근무 서버 (onwork-server)
 
 [attendance-app](../attendance-app)의 API 서버. [NestJS](https://nestjs.com) 12, DB는 Supabase(Postgres).
 앱의 목(mock) 구현과 같은 규칙으로 동작하도록 `src/lib`의 판정 로직을 그대로 옮겼습니다.

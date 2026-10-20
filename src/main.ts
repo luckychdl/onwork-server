@@ -18,4 +18,4 @@ const app = await NestFactory.create(AppModule);
 // 앱의 웹 빌드(expo start --web)에서도 부를 수 있게 연다. 인증은 Bearer 토큰이라 쿠키는 쓰지 않는다.
 app.enableCors();
 await app.listen(env.port);
-console.log(`출근체크 서버 실행 중: http://localhost:${env.port} (${env.timeZone})`);
+console.log(`오늘근무 서버 실행 중: http://localhost:${env.port} (${env.timeZone})`);
